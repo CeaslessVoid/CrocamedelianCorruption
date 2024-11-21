@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="CrCApparelBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>
+      <Beauty>25</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <!-- Nun -->
+
+  <ThingDef ParentName="CrCApparelBase">
+    <defName>CrC_Nun</defName>
+    <thingClass>KLKApparels.ShenyiActived</thingClass>
+    <label>Test</label>
+    <description>Test</description>
+    <graphicData>
+      <texPath>Corruption/Nun/Nun_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>9999</MaxHitPoints>
+      <Mass>0.0</Mass>
+      <EquipDelay>2.5</EquipDelay>
+      <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <Insulation_Cold>125</Insulation_Cold>
+      <Insulation_Heat>82</Insulation_Heat>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+		<li>Hands</li>
+		<li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Corruption/Nun/Nun</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+	  <gender>Female</gender>
+    </apparel>
+
+    <equippedStatOffsets>
+      <MoveSpeed>5.2</MoveSpeed>
+      <AimingDelayFactor>-0.4</AimingDelayFactor>
+      <MeleeDodgeChance>8</MeleeDodgeChance>
+      <MeleeHitChance>8</MeleeHitChance>
+      <Flammability>-1</Flammability>
+      <PainShockThreshold>0.15</PainShockThreshold>
+      <ToxicResistance>1</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1.0</ToxicEnvironmentResistance>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <MeleeDamageFactor MayRequire="Ludeon.RimWorld.Biotech">0.5</MeleeDamageFactor>
+      <IncomingDamageFactor>-0.3</IncomingDamageFactor>
+      <InjuryHealingFactor>1</InjuryHealingFactor>
+      <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">-0.7</StaggerDurationFactor>
+      
+    </equippedStatOffsets>
+
+    <!-- <modExtensions>
+      <li Class="KLKApparels.KLKModEx">
+        <linkedApparel>KLK_SYBbase</linkedApparel>
+        <fitBodies>
+          <li>Female</li>
+        </fitBodies>
+      </li>
+    </modExtensions> -->
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+  </ThingDef>
+</Defs>
